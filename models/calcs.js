@@ -3,13 +3,11 @@ function amount(transactions) {
         if (transaction.operation === "COMPRAR") {
             acc.compraskg += transaction.amount;
             acc.comprasreais += (transaction.price * transaction.amount);
-            acc.totalkg += transaction.amount;
-            acc.totalreais += (transaction.price * transaction.amount);
+            acc.total += transaction.amount;
         } else {
             acc.vendaskg += transaction.amount;
             acc.vendasreais += (transaction.price * transaction.amount);
-            acc.totalkg -= transaction.amount;
-            acc.totalreais -= (transaction.price * transaction.amount);
+            acc.total -= transaction.amount;
         }
 
         return acc;
@@ -18,8 +16,7 @@ function amount(transactions) {
         comprasreais: 0,
         vendaskg: 0,
         vendasreais: 0,
-        totalkg: 0,
-        totalreais: 0
+        total: 0
     });
 
     console.log(summary);
