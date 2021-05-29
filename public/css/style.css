@@ -1,0 +1,209 @@
+/* General */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    border: none;
+}
+body{
+    background-image:linear-gradient(#313866 40%, #50409a, #964ec2);
+    height: 100vh ;
+}
+
+/* Header */
+
+.navBar{
+    width: 100vw;
+    padding: 5px;
+    
+}
+
+.navButton{
+    margin: 10px;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 5px;
+    background-color: #eee;
+    box-shadow: 2px 2px 5px #111;
+    cursor: pointer;
+}
+
+/* Main */
+main{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    
+}
+
+/* Release Area */
+.releases{
+    background-color: #eee;
+    box-shadow: 2px 2px 5px #111;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    height: 80vh;
+    border: 2px solid #eee;
+    
+}
+
+.releasesArea{
+    background-color: #eee;
+    padding: 5px;
+    height: 90%;
+    overflow: auto;
+}
+.card{
+    text-align: start;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px #111;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 5px;
+    
+    
+}
+.cardHeader{
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    
+}
+
+.COMPRAR{
+    background-color: #f99;
+}
+
+.VENDER{
+    background-color: #9f9;
+}
+
+/* Dashboard Area */
+
+.dashBoard{
+    background-color: #eee;
+    box-shadow: 2px 2px 5px #111;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    height: 80vh;
+    border: 2px solid #eee;
+}
+
+.dashBoardArea{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    height: 90%;
+    
+}
+
+.dashBoard .card{
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+    
+}
+
+.DashBoardCard{
+    font-size: 40px;
+}
+
+.vendas .cardHeader{
+    background-color: #9f9;
+}
+
+.compras .cardHeader{
+    background-color: #f99;
+}
+
+/* Footer */
+
+footer{
+    position: fixed;
+    bottom: 0;
+    line-height: 40px;
+    color: #fff;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+
+}
+
+
+/* Form */
+
+.form{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #2229;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 50vw;
+    background-color: #ddd;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #111;
+    text-align: center;
+    padding: 10px;
+}
+
+.formArea{
+    width: 100%;
+    text-align: justify;
+    height: 40px;
+    padding: 3px 5px;
+    margin: 5px 0;
+    background-color: #eee;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    box-shadow: 1px 1px 3px #111;
+}
+.input{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    margin-left: 5px;
+    padding: 5px;
+}
+
+.closeForm{
+    color: #eee;
+    font-weight: bolder;
+    font-size: larger;
+    position: relative;
+    right: -28vw;
+    top: -55px;
+    cursor: pointer;
+}
+
+.formButton{
+    margin: 10px;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 5px;
+    background-color: #77c;
+    box-shadow: 2px 2px 5px #111;
+    cursor: pointer;
+    color: #fff;
+}
+
+.operation{
+    display: none;
+}

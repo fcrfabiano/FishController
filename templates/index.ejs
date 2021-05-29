@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <title>Tron Project</title>
+</head>
+<body>
+    <header>
+        <nav class="navBar">
+            <button class="navButton" onclick="openForm(this)" value="comprar">Comprar</button>
+            <button class="navButton" onclick="openForm(this)" value="vender">Vender</button>
+
+        </nav>
+    </header>
+
+    <main>
+        <!-- Dashboard -->
+        <div class="dashBoard">
+            <h1>DashBoard</h1>
+
+            <div class="dashBoardArea">
+                <div class="vendas card">
+                    <div class="cardHeader">
+                        <h3>Vendas</h3>
+                    </div>
+                    <div class="cardBody DashBoardCard">
+                        <p><%= formatKg(amount.vendaskg).replace('k', 'K') %></p>
+                        <p><%= formatPrice(amount.vendasreais) %></p>
+
+                    </div>
+                </div>
+
+                <div class="compras card">
+                    <div class="cardHeader">
+                        <h3>Compras</h3>
+                    </div>
+                    <div class="cardBody DashBoardCard">
+                        <p><%= formatKg(amount.compraskg).replace('k', 'K') %></p>
+                        <p><%= formatPrice(amount.comprasreais) %></p>
+                    </div>
+                </div>
+
+                <div class="compras card">
+                    <div class="cardHeader">
+                        <h3>Total</h3>
+                    </div>
+                    <div class="cardBody DashBoardCard">
+                        <p><%= formatKg(amount.totalkg).replace('k', 'K') %></p>
+                        <p><%= formatPrice(amount.totalreais) %></p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- Releases -->
+        <div class="releases">
+            <h1>Lancamentos</h1>
+            <div class="releasesArea">
+                <% for(let i = 0; i < items.length; i++){ %>
+                    <form action="" method="post">
+                        <div class="card" id=" <%= items[i]._id %> ">
+                            <div class="cardHeader <%= items[i].operation %>">
+                                <h3> <%= items[i].operation %> </h3>
+                            </div>
+                            <div class="cardBody">
+                                <div class="product">Produto: <%= items[i].product %> </div>
+                                <div class="amount">Quantidade: <%= items[i].amount %> Kg</div>
+                                <div class="price">Valor por Kg: R$ <%= items[i].price %> </div>
+                                <div class="date">Data: <%= items[i].date.getDate() + "." + (items[i].date.getMonth()+1) + "." + items[i].date.getFullYear() %> </div>
+                            </div>
+                        </div>
+                    </form>
+                <% } %> 
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>DinoDev&copy;</p>
+    </footer>
+
+    <div id="formArea"></div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
